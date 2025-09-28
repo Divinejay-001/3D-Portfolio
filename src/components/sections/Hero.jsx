@@ -1,6 +1,7 @@
 import React from 'react'
 import { words } from '../../constants'
 import Button from '../Button'
+import HeroExperience from '../Hero Models/HeroExperience'
 
 const Hero = () => {
   return (
@@ -37,10 +38,8 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-             Divine here 👋 A developer from Nigeria with a mission: write code and impact lives.
-            </p>
+Hi 👋 I’m Divine, building seamless web experiences that             </p>
 
             <Button
               text="See My Work"
@@ -49,9 +48,14 @@ const Hero = () => {
             />
           </div>
         </header>
-    {/* RIGHT HERO CONTENT */}
-    <figure></figure>
-        </div>
+   
+        {/* RIGHT: 3D Model or Visual */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
+      </div>
         </section>
   )
 }
