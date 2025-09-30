@@ -259,24 +259,62 @@ section {
   }
 
   .tech-card-animated-bg {
-    @apply absolute left-0 bottom-[0] w-full h-full  group-hover:bottom-0 transition-all duration-700;
+  @apply absolute left-0 bottom-[-100%] w-full h-full transition-all duration-700 group-hover:bottom-0;
+  
+  background: radial-gradient(circle at 20% 30%, rgba(132, 193, 213, 0.5), transparent 60%),
+             
+              #0F0F28; /* deep bluish base */
+  background-blend-mode: screen;
+  /* filter: blur(8px); */
+  animation: waterFlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes waterFlow {
+  0% {
+    background-position: 0% 50%, 50% 50%, 100% 50%;
   }
+  100% {
+    background-position: 100% 50%, 0% 50%, 50% 100%;
+  }
+}
+
+
+@keyframes waterFlow {
+  0% {
+    background-position: 0% 50%, 50% 50%, 100% 50%;
+  }
+  100% {
+    background-position: 100% 50%, 0% 50%, 50% 100%;
+  }
+}
+
+
 
   .tech-card-content {
-    @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
+    @apply flex flex-wrap lg:justify-center lg:items-center  flex-col md:justify-center items-center xl:gap-5 lg:gap-3 xl:h-[50vh] lg:min-h-[40vh] overflow-hidden relative z-10 group-hover:cursor-grab;
 
     & p {
-      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
-    }
+   @apply text-lg 2xl:text-2xl pb-3 lg:pb-1 xl:pb-0 font-semibold 
+         text-white-50 text-center;
+            }
   }
 
   .tech-grid {
-    @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
-  }
+  @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 lg:flex lg:flex-wrap lg:justify-center lg:w-full
+         xl:gap-16 md:gap-10 gap-5 mt-16 
+         justify-center; /* centers the whole row */
+}
 
-  .tech-icon-wrapper {
-    @apply flex justify-center items-center w-52 h-60 relative;
-  }
+
+
+ .tech-icon-wrapper {
+  @apply flex justify-center items-center w-52 h-60 relative 
+         transition-transform duration-500 group-hover:scale-110 
+         lg:w-35 lg:h-40;
+}
+
+
+
 
   form {
     label {

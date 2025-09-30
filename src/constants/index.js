@@ -1,3 +1,5 @@
+
+
 const navLinks = [
   {
     name: "Work",
@@ -75,42 +77,59 @@ const abilities = [
   {
     imgPath: "/images/seo.png",
     title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    desc: "Committed to excellence, ensuring every project is crafted with precision and care.",
   },
   {
     imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    title: "Effective Communication",
+    desc: "Clear, consistent updates at every stage to keep you fully informed and confident.",
   },
   {
     imgPath: "/images/time.png",
     title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    desc: "Respecting deadlines by delivering projects promptly without compromising quality.",
   },
 ];
 
 const techStackImgs = [
+  // Frontend
   {
-    name: "React Developer",
+    name: "React",
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "Next.js",
+    imgPath: "/Mine/nextjs.webp",
   },
   {
-    name: "Backend Developer",
+    name: "TailwindCSS",
+    imgPath: "/Mine/tailwind.webp",
+  },
+
+  // Backend
+  {
+    name: "Node.js",
     imgPath: "/images/logos/node.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "MongoDB",
+    imgPath: "https://www.svgrepo.com/show/439231/mongodb.svg",
+  },
+
+ 
+
+  // Tools
+  {
+    name: "Git & GitHub",
+    imgPath: "/Mine/github.webp",
   },
   {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    name: "Figma",
+    imgPath: "/Mine/figma.webp",
   },
 ];
+
+
 
 const techStackIcons = [
   {

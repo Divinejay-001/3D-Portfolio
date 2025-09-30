@@ -44,7 +44,7 @@ const ShowcaseSection = () => {
     {/* Left side  */}
        <div className='first-project-wrapper' ref={project1Ref}>
     <div className='image-wrapper'>
-    <img src="/images/project1.png" alt="Ryde" />
+    <img src="https://i.pinimg.com/736x/63/82/79/63827936ed1dca60e742ab37c24adc5d.jpg" alt="Collabora" />
     </div>
     <div className='text-content'>
         <h2>Task Made Simple with a Powerful, User-Friendly App called Collabora</h2>
@@ -56,14 +56,16 @@ const ShowcaseSection = () => {
     <div className='project-list-wrapper overflow-hidden'>
 <div className='project' ref={project2Ref}>
     <div className='image-wrapper bg-[#ffefdb]'>
-<img src="/images/project2.png" alt="Library Management Platform" />
+<img src="https://i.pinimg.com/1200x/1a/b1/af/1ab1af3ba1c3e20897692c5210048d0d.jpg" alt="Library Management Platform" 
+className='rounded-md object-cover'/>
 </div>
-<h2>Library Management Platform</h2>
+<h2>Shophere Eccomerce Platform</h2>
 </div>
 
 <div className='project' ref={project3Ref}>
     <div className='image-wrapper bg-[#ffe7eb]'>
-<img src="/images/project3.png" alt="Cash Management System" />
+<img src="https://i.pinimg.com/1200x/47/75/e0/4775e0f971edeefe8fa6b52a62c59f52.jpg"  
+className='rounded-md object-cover' alt="Cash Management System" />
 </div>
 <h2>Cash Management System</h2>
 </div>
