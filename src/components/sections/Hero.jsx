@@ -2,8 +2,20 @@ import React from 'react'
 import { words } from '../../constants'
 import Button from '../Button'
 import HeroExperience from '../Hero Models/HeroExperience'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import AnimatedCounter from '../AnimatedCounter'
+
 
 const Hero = () => {
+  useGSAP(() => {
+    gsap.fromTo('.hero-text h1', { y: 50, opacity: 0 }, 
+      { y: 0, opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power2.out',
+       });
+  })
   return (
     <section id='hero' className='relative overflow-hidden'>
         <div className='absolute top-0 left-0 z-10'>
@@ -16,7 +28,7 @@ const Hero = () => {
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                Shaping
+                Transforming
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
@@ -35,16 +47,16 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <h1>into Real-World Projects</h1>
+              <h1>that Make Impact.</h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
 Hi 👋 I’m Divine, building seamless web experiences that             </p>
 
             <Button
               text="See My Work"
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="button"
+              className="md:w-60 md:h-16 w-60 h-12"
+              id="counter"
             />
           </div>
         </header>
@@ -56,6 +68,7 @@ Hi 👋 I’m Divine, building seamless web experiences that             </p>
           </div>
         </figure>
       </div>
+      <AnimatedCounter />
         </section>
   )
 }
