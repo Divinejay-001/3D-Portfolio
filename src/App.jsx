@@ -9,6 +9,7 @@ import ExperienceSection from './components/sections/ExperienceSection'
 import TechStack from './components/sections/TechStack'
 import Testimonials from './components/sections/Testimonials'
 import Contact from './components/sections/Contact'
+import Footer from './components/sections/Footer'
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
      <TechStack/>
      <Testimonials/>
      <Contact/>
+     <Footer/>
     </>
   )
 }

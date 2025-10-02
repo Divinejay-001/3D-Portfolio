@@ -4,45 +4,32 @@ import ContactExperience from '../Hero Models/ContactExperience'
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-      const formRef = useRef(null);
+     const form = useRef();
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState(null); // "success" | "error" | null
 
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: ""
-    })
-  const [loading, setLoading] = useState(false)
-  
-    const handleChange = (e) => {
-        const { name, value  } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
+      const sendEmail = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setStatus(null);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-          
-        setLoading(true)
-        try{
-       await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAIL_JS_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_APP_PUBLIC_KEY,
+    try {
+      await emailjs.sendForm(
+        'service_7bimslh',
+        'template_14bylum',
+        form.current,
+        '-6O_x7lhtYIqwaClF'
+      );
 
-       )
-        //Reset form after submission
-        setFormData({ name: '', email: '', message: ''})
-        }  catch(error){
-      console.log('EMAILJS ERROR', error)
-        } finally {
-            setLoading(false)
-        }
-
-       
+      setStatus("success");
+      form.current.reset();
+    } catch (error) {
+      console.error(error.text);
+      setStatus("error");
+    } finally {
+      setIsLoading(false);
     }
+  };
   return (
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
@@ -54,8 +41,8 @@ const Contact = () => {
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
               <form
-                ref={formRef}
-                onSubmit={handleSubmit}
+                 ref={form}
+            onSubmit={sendEmail}
                 className="w-full flex flex-col gap-7"
               >
                 <div>
@@ -64,8 +51,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    // value={formData.name}
                     placeholder="What’s your good name?"
                     required
                   />
@@ -77,8 +63,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    // value={formData.email}
                     placeholder="What’s your email address?"
                     required
                   />
@@ -89,30 +74,36 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
+                    // value={formData.message}
                     placeholder="How can I help you?"
                     rows="5"
                     required
                   />
                 </div>
 
-                <button type="submit" disabled={loading}>
+                <button type="submit" disabled={isLoading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
-                      {loading ? "Sending..." : "Send Message"}
+                      {isLoading ? "Sending..." : "Send Message"}
                     </p>
                     <div className="arrow-wrapper">
                       <img src="/images/arrow-down.svg" alt="arrow" />
                     </div>
                   </div>
                 </button>
+                 {/* Inline Feedback */}
+            {status === "success" && (
+              <p className="text-green-400 mt-2">✅ Message sent successfully!</p>
+            )}
+            {status === "error" && (
+              <p className="text-red-400 mt-2">❌ Failed to send message. Please try again later.</p>
+            )}
               </form>
             </div>
           </div>
           <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
+            <div className="bg-[#C7C6C1] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
               <ContactExperience />
             </div>
           </div>
