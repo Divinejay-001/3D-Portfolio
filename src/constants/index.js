@@ -165,42 +165,51 @@ const techStackIcons = [
 ];
 
 const expCards = [
+ {
+  review: "Divinegift showed exceptional frontend skills, especially with his Shophere e-commerce project. His focus on clean design, user-friendly interfaces, and smooth interactions brought the project to life and impressed everyone who used it.",
+  imgPath: "/images/exp1.png", // screenshot of your Shophere project
+  logoPath: "/images/logos/shop.png", // optional logo/placeholder
+  title: "Frontend Developer",
+  date: "February 2025",
+  responsibilities: [
+    "Designed and developed **Shophere**, a responsive e-commerce platform with a sleek and intuitive UI.",
+    "Implemented **dark and light mode themes**, ensuring accessibility and personalization for users.",
+    "Created **dedicated Men’s and Women’s sections** with seamless navigation and product organization.",
+    "Added engaging **animations and sliders** to enhance the shopping experience.",
+    "Focused on building a **modern, scalable frontend** with React for smooth performance."
+  ],
+},
+
+ {
+  review: "Building Collabora gave me hands-on SaaS experience, from frontend to backend. I designed and built a full-stack task management system that helps teams collaborate and stay organized.",
+  imgPath: "/images/exp2.png", // replace with your project screenshot
+  logoPath: "/images/logos/collabora.webp", // replace with your logo or Collabora brand mark
+  title: "Full Stack Developer (MERN)",
+  date: "Jan 2025 – Present", // adjust timeline if needed
+  responsibilities: [
+    "Developed Collabora, a SaaS task management system, using the MERN stack (MongoDB, Express, React, Node.js).",
+    "Implemented role-based auth (admin & team members) using JWT.",
+    "Built RESTful APIs to handle task creation, assignments, and real-time collaboration features.",
+    "Designed a responsive React UI with reusable components.",
+    "Deployed the application with version control and CI/CD workflows for a production-ready SaaS experience.",
+  ],
+},
+
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
-    ],
-  },
-  {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
-    responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
-    ],
-  },
-  {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
-    ],
-  },
+  review: "Divine’s work on BlocMeet’s backend laid the foundation for a smooth and scalable event management system. His Node.js expertise ensured reliable performance and efficient API design for our users.",
+  imgPath: "/images/exp3.png", // (replace with your own image)
+  logoPath: "/images/logos/node.png", // (replace with BlocMeet/Concave logo)
+  title: "Backend Developer (Node.js)",
+  date: "June 2025 – Present", // adjust the timeline
+  responsibilities: [
+    "Developing the backend logic for BlocMeet, an event management system built for Concave.",
+    "Designing and implementing RESTful APIs with Node.js and Express to handle authentication, event creation, and user management.",
+    "Integrating MongoDB for scalable data storage and efficient queries.",
+    "Ensuring secure authentication and authorization using JWT and Google OAuth.",
+    "Collaborating with the frontend team to deliver seamless event search and booking features.",
+  ],
+}
+
 ];
 
 const expLogos = [

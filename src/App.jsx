@@ -7,6 +7,8 @@ import LogoSection from './components/LogoSection'
 import FeatureCards from './components/sections/FeatureCards'
 import ExperienceSection from './components/sections/ExperienceSection'
 import TechStack from './components/sections/TechStack'
+import Testimonials from './components/sections/Testimonials'
+import Contact from './components/sections/Contact'
 
 function App() {
   
@@ -19,6 +21,8 @@ function App() {
      <FeatureCards/>
      <ExperienceSection/>
      <TechStack/>
+     <Testimonials/>
+     <Contact/>
     </>
   )
 }

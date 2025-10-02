@@ -21,7 +21,7 @@ const GlowCard = ({card, children, index}) => {
     }
   return (
     <div ref={(el) => (cardRefs.current[index] = el)} onMouseMove={handleMouseMove(index)} 
-    className='card card-border user-select-none timeline-card rounded-xl p-10'>
+    className='card card-border user-select-none timeline-card rounded-xl p-8 lg:p-4 mb-5 break-inside-avoid-column'>
       <div className='glow'/>
       <div className='flex items-center gap-1 mb-5'>
         {Array.from({length: 5}, (_, i) =>(
